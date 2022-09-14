@@ -4,9 +4,14 @@ import NFTContainer from './nft_container.js'
 
 function App() {
 
+  // Set State Hook to get and set Wallet Address
   const [walletAdd, setWallletAdd] = useState(null);
+  // Set Nfts hook to keep track of full nft list for a wallet
   const [nfts, setNfts] = useState([]);
 
+  /**
+   * Use Effect Hook to track whenever the wallet address is changed, make sure you update the NFTs are updatead
+   */
   useEffect(() => {
     getNftData()
   }, [walletAdd])
