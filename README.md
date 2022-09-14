@@ -1,3 +1,16 @@
+This is my LearnWeb3DAO Technical Assessment, I decided to use React and Javascript for my overall tech stack as that just seemed to be the most simplistic for the project at hand. The general user process is as follows:
+
+1. User opens your website
+2. User connects their Ethereum wallet
+3. Website loads all LearnWeb3 and Buildspace NFTs owned by that address
+4. Website displays all the images of those NFTs
+
+It took some time and research for me to figure out how to deal with blockchain and NFTs with full stack development testing different frameworks and programming languages but I feel this end product was probably the most efficient.
+
+as of now, there isn't a whole lot in terms of the design, but nothing some more time can't fix. In addition, the application can only support images right now but it wouldn't be difficult to implement an mp4 functionality for video NFTs.
+
+Overall, super interesting and I had a really good time understanding and applying the research I learned over the last week and a half
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
