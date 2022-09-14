@@ -33,7 +33,7 @@ function App() {
    */
   const getNftData = async() => {
     if(!walletAdd) return;
-    const response = await fetch(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:0x40EfBE92D9AD4cfA8Deb52111fBCaCCD4DBd5495`)
+    const response = await fetch(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:${walletAdd}`)
     const data = await response.json()
     setNfts(data.items)
   }
@@ -43,7 +43,7 @@ function App() {
       <div className = "text">
         Account: {walletAdd}
       </div>
-      <button onClick={connectWallet}>
+      <button className='connect-button' onClick={connectWallet}>
         Connect Wallet!
       </button>
       <NFTContainer nfts={nfts}/> 
