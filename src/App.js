@@ -12,6 +12,9 @@ function App() {
   }, [walletAdd])
 
 
+  /**
+   * Function used to get the account of the user's wallet 
+   */
   const connectWallet = async() => {
     if (typeof window.ethereum !== 'undefined') {
       const accounts = await window.ethereum.request({method: 'eth_requestAccounts'});
@@ -19,6 +22,10 @@ function App() {
     }
   }
 
+  /**
+   * Obtains the NFT Data with all details from the user's wallet 
+   * @returns in the instance the wallet does not exist, the function will terminate
+   */
   const getNftData = async() => {
     if(!walletAdd) return;
     const response = await fetch(`https://api.rarible.org/v0.1/items/byOwner/?owner=ETHEREUM:${walletAdd}`)
